@@ -6,19 +6,19 @@
   </head>
   <body>
     <div id="head">
-      <input
-        id="search"
-        type="text"
-        placeholder="Search bookmarks"
-        autocomplete="off"
-        spellcheck="false"
-      />
+      <div id="top">
+        <input
+          id="search"
+          type="text"
+          placeholder="Search bookmarks"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <button id="manage" type="button">Manage bookmarks</button>
+      </div>
+      <div id="hint" role="status"></div>
     </div>
     <div id="list" role="tree" aria-label="Bookmarks"></div>
-    <div id="foot">
-      <button id="manage" type="button">Manage bookmarks</button>
-      <span id="hint" role="status"></span>
-    </div>
     <script type="module" src="menu.js"></script>
   </body>
 </html>

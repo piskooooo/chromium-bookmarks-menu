@@ -23,8 +23,9 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+html {
+  /* Transparent so the popup window's own (rounded) shape shows through. */
+  background: transparent;
   margin: 0;
   padding: 0;
 }
@@ -32,21 +33,30 @@ body {
 body {
   width: 360px;
   max-height: 600px;
+  margin: 0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   background: var(--bg);
   color: var(--fg);
+  border-radius: 10px;
   font: 13px/1.35 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 }
 
 #head {
-  padding: 6px 8px;
+  padding: 6px 8px 4px;
   border-bottom: 1px solid var(--line);
 }
 
+#top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 #search {
-  width: 100%;
+  flex: 1 1 auto;
+  min-width: 0;
   padding: 5px 8px;
   border: 1px solid var(--line);
   border-radius: 6px;
@@ -58,6 +68,35 @@ body {
 
 #search:focus {
   border-color: var(--fg-dim);
+}
+
+#manage {
+  flex: 0 0 auto;
+  font: inherit;
+  white-space: nowrap;
+  color: var(--fg);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+#manage:hover {
+  background: var(--hover);
+}
+
+#hint {
+  color: var(--fg-dim);
+  font-size: 11px;
+  margin-top: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Only takes up room while a transient message is showing. */
+#hint:empty {
+  display: none;
 }
 
 #list {
@@ -142,18 +181,6 @@ body {
   padding-top: 0;
 }
 
-.section > .row {
-  color: var(--fg-dim);
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  cursor: default;
-}
-
-.section > .row:hover {
-  background: transparent;
-}
-
 #empty {
   padding: 12px 10px;
   color: var(--fg-dim);
@@ -162,33 +189,4 @@ body {
 
 #empty.show {
   display: block;
-}
-
-#foot {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 8px;
-  border-top: 1px solid var(--line);
-}
-
-#manage {
-  font: inherit;
-  color: var(--fg);
-  background: transparent;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  padding: 4px 8px;
-  cursor: pointer;
-}
-
-#manage:hover {
-  background: var(--hover);
-}
-
-#hint {
-  color: var(--fg-dim);
-  font-size: 11px;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }

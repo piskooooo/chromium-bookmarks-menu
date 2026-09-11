@@ -115,13 +115,9 @@ function renderSections() {
     showEmpty('No bookmarks yet.');
     return;
   }
-  sections.forEach((section, i) => {
+  for (const section of sections) {
     const wrap = document.createElement('div');
-    wrap.className = 'section' + (i === 0 ? '' : '');
-    const header = document.createElement('div');
-    header.className = 'row';
-    header.textContent = section.title || '(untitled)';
-    wrap.appendChild(header);
+    wrap.className = 'section';
 
     for (const child of section.node.children || []) {
       const kind = nodeKind(child);
@@ -132,7 +128,7 @@ function renderSections() {
       }
     }
     listEl.appendChild(wrap);
-  });
+  }
 }
 
 function renderResults(query) {

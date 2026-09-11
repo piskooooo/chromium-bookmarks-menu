@@ -23,12 +23,13 @@ This is a quick-and-dirty Chromium/Helium extension that gives you:
 - `menu.html`, `menu.css`, `menu.js` – popup UI and behavior
 - `lib/intent.js` – click semantics
 - `lib/tree.js` – bookmark tree helpers
-- `test/` – Node test suite (25 tests)
+- `test/` – Node test suite (29 tests)
 - `scripts/make_icons.py` – local icon generator
 
 ## Notes
 
-- `Manage bookmarks` button tries to open `chrome://bookmarks/`.
+- The `Manage bookmarks` button sits in the top row next to the search box
+  (there is no footer bar) and tries to open `chrome://bookmarks/`.
   Chrome blocks extensions from opening that URL in some contexts.
 - Folder opening currently uses `collectOpenable()` and skips non-openable URLs like:
   `javascript:` and `chrome://`.
@@ -42,5 +43,5 @@ npm test
 
 ## Current state
 
-- Unit tests: **pass** (25/25)
+- Unit tests: **pass** (29/29)
 - Icons generated in `icons/`
