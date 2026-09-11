@@ -40,7 +40,7 @@ FALLBACK_BORDER = 1.0
 # wider than the unit circle (measured max |u| = 1.139 at v ~ 0.54), so the
 # horizontal extent is normalised by U_MAX rather than 1.
 U_MAX = 1.139
-HEART_RATIO = 0.68  # heart width as a fraction of the square's side
+HEART_RATIO = 0.80  # heart width as a fraction of the square's side
 HEART_RIM = 0.94  # inside this fraction of the heart is "fill", outside "rim"
 
 # Below this the sheen turns to mush: at 16-32px a light pixel inside the blue
