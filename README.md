@@ -15,7 +15,7 @@ This is a quick-and-dirty Chromium extension that gives you:
 1. Open **chrome://extensions**
 2. Enable **Developer mode**
 3. Click **Load unpacked**
-4. Choose this folder: `~/helium-bookmarks-menu`
+4. Choose this folder: `~/chromium-bookmarks-menu`
 
 ## Files
 
@@ -37,7 +37,7 @@ This is a quick-and-dirty Chromium extension that gives you:
 ## Run tests
 
 ```bash
-cd ~/helium-bookmarks-menu
+cd ~/chromium-bookmarks-menu
 npm test
 ```
 
