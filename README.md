@@ -1,6 +1,6 @@
-# Firefox-style Bookmarks Menu (quick extension)
+# Firefox-style Bookmarks Menu
 
-This is a quick-and-dirty Chromium/Helium extension that gives you:
+This is a quick-and-dirty Chromium extension that gives you:
 
 - A toolbar button with popup bookmark tree
 - Normal left click for open behavior
