@@ -1,0 +1,10 @@
+{
+  "name": "helium-bookmarks-menu",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Firefox-style bookmarks menu panel as a Chromium/Helium extension.",
+  "scripts": {
+    "test": "node --test"
+  }
+}
